@@ -1,9 +1,10 @@
 import storeData from './preserveData.js';
-/* eslint-disable import/no-cycle */
-import { booksData } from '../index.js';
-/* eslint-disable import/no-cycle */
 
-export default class Book {
+const addButton = document.querySelector('#add');
+const titleInput = document.querySelector('#title');
+const autherInput = document.querySelector('#author');
+let booksData = [];
+class Book {
   constructor(title, author) {
     this.title = title;
     this.author = author;
@@ -23,3 +24,49 @@ export default class Book {
     storeData(currentBooksData);
   }
 }
+
+const dynamicCreation = document.querySelector('.daynamic');
+let count = 0;
+const bookLoders = (bookToBeLoad) => {
+  const book = document.createElement('article');
+  book.classList.add('article_content');
+  if (count % 2 === 0) {
+    book.style.backgroundColor = '#e5e5e5c4';
+  } else {
+    book.style.backgroundColor = 'white';
+  }
+  count += 1;
+  const title = document.createElement('p');
+  title.innerText = `"${bookToBeLoad.title}" by ${bookToBeLoad.author}`;
+  book.append(title);
+  const button = document.createElement('button');
+  button.classList.add('remove');
+  button.innerText = 'Remove';
+  button.addEventListener('click', () => {
+    Book.removeBook(bookToBeLoad);
+    book.style.display = 'none';
+  });
+  book.append(button);
+  dynamicCreation.append(book);
+  dynamicCreation.classList.add('daynamic');
+};
+
+export const retrieveData = () => {
+  const bookData = window.localStorage.getItem('books');
+  const parseBookData = JSON.parse(bookData);
+  if (parseBookData) {
+    booksData = parseBookData;
+  }
+};
+
+export const displayToPage = () => {
+  booksData.forEach((book) => {
+    bookLoders(book);
+  });
+};
+
+addButton.addEventListener('click', () => {
+  const newBook = new Book(titleInput.value, autherInput.value);
+  Book.addBook(newBook);
+  displayToPage(newBook);
+});
