@@ -1,5 +1,6 @@
 /* eslint-disable import/no-cycle */
 import Book from './books.js';
+/* eslint-disable import/no-cycle */
 import { booksData } from '../index.js';
 
 const dynamicCreation = document.querySelector('.daynamic');
