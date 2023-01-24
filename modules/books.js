@@ -1,6 +1,7 @@
-/* eslint-disable import/no-cycle */
 import storeData from './preserveData.js';
+/* eslint-disable import/no-cycle */
 import { booksData } from '../index.js';
+/* eslint-disable import/no-cycle */
 
 export default class Book {
   constructor(title, author) {

@@ -104,7 +104,7 @@ In order to run this project you need: any functional browser.
 ### Setup
 
 Clone this repository to your desired folder:
-cd my-folder git clone [@fithamlak](https://github.com/fithamlak/Awesome-bookssES6)
+cd my-folder git clone [@fithamlak](https://github.com/fithamlak/Awesome-books-ES6)
 
 ### Install
 
@@ -179,7 +179,7 @@ I would like to thank Microverse team for the information provided
 
 - **Can I download and use the project?**
 
-  - Yes, the project is open source, you can downloa and use it as you wish.
+  - Yes, the project is open source, you can download and use it as you wish.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
