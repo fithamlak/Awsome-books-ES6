@@ -179,7 +179,7 @@ I would like to thank Microverse team for the information provided
 
 - **Can I download and use the project?**
 
-  - Yes, the project is open source, you can download and use it as you wish.
+  - Yes, the project is open source, you can downloa and use it as you wish.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
