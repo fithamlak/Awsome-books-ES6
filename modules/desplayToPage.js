@@ -28,7 +28,6 @@ const bookLoders = (bookToBeLoad) => {
   dynamicCreation.classList.add('daynamic');
 };
 
-// eslint-disable-line import/no-mutable-exports
 const displayToPage = () => {
   booksData.forEach((book) => {
     bookLoders(book);
