@@ -2,7 +2,7 @@
 import { bookListHandler, addSectionHandler, contactInfoHandler } from './modules/singlePage.js';
 import { DateTime } from './modules/luxon.js';
 import Book from './modules/books.js';
-import displayToPage from './modules/desplayBook.js';
+import displayToPage from './modules/desplayToPage.js';
 
 const linForBookList = document.querySelector('.for_list_link');
 const linkForAddSection = document.querySelector('.for_addSection_link');
